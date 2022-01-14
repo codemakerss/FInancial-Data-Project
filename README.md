@@ -12,6 +12,8 @@ Get daily, weekly, monthly, intraday stock price data from Alpha Vantage.
 
 listing and delsting status, company information are also provided.
 
+You need to get your own api key from : https://www.alphavantage.co/support/#api-key
+
 ## Inserting database
 
 Make sure MySQL has already been installed on your computer.

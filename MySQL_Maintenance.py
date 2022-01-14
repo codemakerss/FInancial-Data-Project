@@ -3,7 +3,7 @@ from mysql.connector.errors import Error, custom_error_exception
 from numpy.core.arrayprint import _array_repr_dispatcher
 from numpy.core.numeric import full
 from numpy.lib.shape_base import column_stack
-from API_Construct import *
+from API_Data_Retrieve import *
 from MySQLConnect import * 
 import mysql.connector
 import pandas as pd

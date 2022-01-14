@@ -1,9 +1,9 @@
 from datetime import timedelta
 from os import PRIO_PGRP
-from API封装类 import *
+from API_Construct import *
 from MySQLConnect import * 
 from MySQL_Maintenance import * 
-import API封装类 as data_mysql 
+import API_Construct as data_mysql 
 
 apikey = ""
 #host="", user="", password="", database=""

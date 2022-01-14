@@ -9,8 +9,8 @@ from pandas.core.frame import DataFrame
 from pandas.io.formats.format import Datetime64Formatter
 from pandas.io.pytables import duplicate_doc
 from sqlalchemy.exc import ObjectNotExecutableError 
-from API封装类 import Alpha_VantageAPI
-from API封装类 import Info_Collected 
+from API_Construct import Alpha_VantageAPI
+from API_Construct import Info_Collected 
 from datetime import date, datetime, timedelta
 import mysql.connector
 import pandas as pd

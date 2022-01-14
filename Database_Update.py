@@ -1,4 +1,4 @@
-from API封装类 import *
+from API_Construct import *
 from MySQLConnect import * 
 apikey = ""
 class Insert_Data(object):

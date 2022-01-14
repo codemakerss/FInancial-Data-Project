@@ -1,10 +1,10 @@
 # Financial Data Encapsulation
 
-I am using Alpha Vantage API to get financial data and reporting as Excel workbooks as well as
+This project aims to provide financial data by using Alpha Vantage API 
 
-inserting those data to my local MySQL database and database maintenance.
+and reporting as Excel workbooks as well as inserting those data to local 
 
-Three parts of file: API data, Inserting database, Database maintenance 
+MySQL database and database maintenance.
 
 ## API data
 
@@ -23,3 +23,6 @@ Select the user with your password to create your own financial database.
 Database backup before checking each table in your database.
 
 The historical error data will be deleted and fixed value will be uodated.
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)

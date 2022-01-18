@@ -45,7 +45,7 @@ class MySQL_Connection(object):
             print(self.database + ' database has already been successfully added in to MySQL! ')
             return db 
     
-# 数据操作层面
+# database management
 class Data_to_SQL(object):
     # Call mysql connection and API here 
     def __init__(self, mysql_connection : classmethod) -> None:
@@ -327,7 +327,7 @@ class Data_to_SQL(object):
             lst1 = ["daily"]
             lst = ["weekly", "monthly"]
             if table_name in lst1:
-                # 检查表单里是否有公司股价，如果有则赋予data值为最新的股价数据
+                # check symbol exists
                 if self.check_symbol_exists(table_name, symbol):
                     max_date = self.find_max_date(table_name, symbol)
                     data = data[data.datetime > str(max_date)]
@@ -339,7 +339,7 @@ class Data_to_SQL(object):
                     self.mysql_connection.commit()
                 print(symbol + " data has already been updated into the " + table_name + " table! ")
             elif table_name in lst:
-                # 检查表单里是否有公司股价，如果有则赋予data值为最新的股价数据
+                #  check symbol exists
                 if self.check_symbol_exists(table_name, symbol):
                     max_date = self.find_max_date(table_name, symbol)
                     data = data[data.datetime > str(max_date)]
@@ -350,7 +350,7 @@ class Data_to_SQL(object):
                     self.mysql_connection.commit()
                 print(symbol + " data has already been updated into the " + table_name + " table! ")
             elif table_name == "intraday":
-                # 检查表单里是否有公司股价，如果有则赋予data值为最新的股价数据
+                #  check symbol exists
                 if self.check_symbol_exists(table_name, symbol):
                     max_date = self.find_max_date(table_name, symbol)
                     data = data[data.datetime > str(max_date)]
@@ -362,7 +362,7 @@ class Data_to_SQL(object):
                 print(symbol+ " data has already been updated into the " + table_name + " table! ")
             # use Info_collected classmethod in the API file
             elif table_name == "company_info":
-                # 公司在表单里不存在的时候加入
+                # only add this when company name do not exists in mysql database table
                 if self.check_symbol_exists(table_name, symbol) == False:
                     for index,row in data.iterrows():
                         sql = "INSERT INTO " + table_name + " VALUES" + str(tuple(row))
@@ -372,7 +372,7 @@ class Data_to_SQL(object):
                 else:
                     print(symbol + " data has already exsits ! ")
             elif table_name == "search":
-                # 查询数据备份
+                # search results backup
                 df_unique = self.find_unique_search(data)
                 if len(df_unique):
                     for index,row in data.iterrows():

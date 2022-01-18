@@ -91,7 +91,6 @@ class Alpha_VantageAPI(object):
     
     # Get more stocks price - no more than 5 stocks due to API call limits 
     def GetMultiStockPrice(self, stocks_id : list) -> DataFrame:
-        #apikey = "BF4TLBIGC0D0F8RY"
         df = pd.DataFrame()
         function_use = input('Choose the stock price time interval you want (daily, weekly, monthly, intraday) : ')
         if function_use.lower() == 'daily':
@@ -351,7 +350,7 @@ class Alpha_VantageAPI(object):
         self.FindIPOCalender().to_excel(writer, sheet_name='IPO Calender')
         writer.save()
     
-# 只针对当前项目，可替换
+# only for this project 
 class Info_Collected(object):
     def __init__(self, apikey : str, api_port : classmethod) -> None:
         self.apikey = apikey 

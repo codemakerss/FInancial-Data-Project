@@ -96,9 +96,8 @@ class MySQL_Maintenance(object):
         dbname  : str
             The database name you want to check 
 
-        每一两周进行优化即可
-        传统优化语句依旧有效
-        MySQL5.7版本推荐对于InnoDB的table使用 alter table table_name engine=innodb 语句的方式来进行表碎片优化
+        
+        MySQL5.7 version perfer using alter table table_name engine=innodb to do mysql dump
         """
         db_optimize = "/usr/local/mysql/bin/mysqlcheck --optimize -u -p --databases " + dbname
         print("MySQL optimize results : successfully ")
@@ -485,7 +484,7 @@ class MySQL_Maintenance(object):
     def data_restore_table(self, dbname : str, table_name : str) -> str:
         
         pass
-# search 需要把返回的所有symbol都过一遍检查再加入
+
 
 if __name__ == "__main__": 
 

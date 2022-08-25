@@ -24,7 +24,7 @@ Select the user with your password to create your own financial database.
 
 Database backup before checking each table in your database.
 
-The historical error data will be deleted and fixed value will be uodated.
+The historical error data will be deleted and fixed value will be updated.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
